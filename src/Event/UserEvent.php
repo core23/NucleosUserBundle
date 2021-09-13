@@ -19,15 +19,9 @@ use Symfony\Contracts\EventDispatcher\Event;
 
 class UserEvent extends Event
 {
-    /**
-     * @var Request|null
-     */
-    protected $request;
+    protected ?Request $request;
 
-    /**
-     * @var UserInterface
-     */
-    protected $user;
+    protected UserInterface $user;
 
     public function __construct(UserInterface $user, Request $request = null)
     {

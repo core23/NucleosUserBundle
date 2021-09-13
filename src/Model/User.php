@@ -30,80 +30,41 @@ abstract class User implements UserInterface, GroupableInterface, LocaleAwareInt
      */
     protected $id;
 
-    /**
-     * @var string|null
-     */
-    protected $username;
+    protected ?string $username;
 
-    /**
-     * @var string|null
-     */
-    protected $usernameCanonical;
+    protected ?string $usernameCanonical;
 
-    /**
-     * @var string|null
-     */
-    protected $email;
+    protected ?string $email;
 
-    /**
-     * @var string|null
-     */
-    protected $emailCanonical;
+    protected ?string $emailCanonical;
 
-    /**
-     * @var bool
-     */
-    protected $enabled;
+    protected bool $enabled;
 
-    /**
-     * @var string|null
-     */
-    protected $salt;
+    protected ?string $salt;
 
-    /**
-     * @var string|null
-     */
-    protected $password;
+    protected ?string $password;
 
-    /**
-     * @var string|null
-     */
-    protected $plainPassword;
+    protected ?string $plainPassword;
 
-    /**
-     * @var DateTime|null
-     */
-    protected $lastLogin;
+    protected ?DateTime $lastLogin;
 
-    /**
-     * @var string|null
-     */
-    protected $confirmationToken;
+    protected ?string $confirmationToken;
 
-    /**
-     * @var DateTime|null
-     */
-    protected $passwordRequestedAt;
+    protected ?DateTime $passwordRequestedAt;
 
     /**
      * @phpstan-var Collection<array-key, GroupTemplate>
      */
-    protected $groups;
+    protected Collection $groups;
 
     /**
      * @var string[]
      */
-    protected $roles;
+    protected array $roles;
 
-    /**
-     * @var string|null
-     */
-    protected $locale;
+    protected ?string $locale;
 
-    /**
-     * @var string|null
-     */
-    protected $timezone;
+    protected ?string $timezone;
 
     public function __construct()
     {
