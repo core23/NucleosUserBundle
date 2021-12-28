@@ -16,10 +16,11 @@ namespace Nucleos\UserBundle\Model;
 use DateTime;
 use Serializable;
 use Symfony\Component\Security\Core\User\EquatableInterface;
+use Symfony\Component\Security\Core\User\LegacyPasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface as BaseUserInterface;
 
-interface UserInterface extends PasswordAuthenticatedUserInterface, BaseUserInterface, EquatableInterface, Serializable
+interface UserInterface extends PasswordAuthenticatedUserInterface, BaseUserInterface, EquatableInterface, Serializable, LegacyPasswordAuthenticatedUserInterface
 {
     public const ROLE_DEFAULT = 'ROLE_USER';
 
